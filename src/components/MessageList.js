@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Message from './Message';
 import _ from 'lodash';
 
 class MessageList extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       messages: []
@@ -14,19 +14,19 @@ class MessageList extends Component {
     });
   }
 
-  getData(values){
+  getData(values) {
     let messagesVal = values;
     let messages = _(messagesVal)
-                      .keys()
-                      .map(messageKey => {
-                          let cloned = _.clone(messagesVal[messageKey]);
-                          cloned.key = messageKey;
-                          return cloned;
-                      })
-                      .value();
-      this.setState({
-        messages: messages
-      });
+      .keys()
+      .map(messageKey => {
+        let cloned = _.clone(messagesVal[messageKey]);
+        cloned.key = messageKey;
+        return cloned;
+      })
+      .value();
+    this.setState({
+      messages: messages
+    });
   }
 
   render() {
@@ -34,7 +34,7 @@ class MessageList extends Component {
       return (
         <div className="card">
           <div className="card-content">
-            <Message message = {message.message} />
+            <Message message={message.message} />
           </div>
         </div>
       )

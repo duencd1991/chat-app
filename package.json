@@ -17,7 +17,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://duencd1991.github.io/chatapp",
+  "homepage": "http://duencd1991.github.io/chat-app",
   "devDependencies": {
     "gh-pages": "^2.0.1"
   }
